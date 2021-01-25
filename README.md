@@ -3,7 +3,7 @@ We cannot add a custom Zipkin server i.e. cannot inject zipkin into another spri
 
 ### Start Zipkin
 curl -sSL https://zipkin.io/quickstart.sh | bash -s
-java -jar zipkin.jar
+<br/>java -jar zipkin.jar
 
 ### Run this project 
 ./gradlew bootRun
