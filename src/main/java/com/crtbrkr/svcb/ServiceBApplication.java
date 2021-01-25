@@ -1,5 +1,7 @@
 package com.crtbrkr.svcb;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,6 +16,8 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class ServiceBApplication {
 
+	private final Logger LOG = LoggerFactory.getLogger(this.getClass());
+
 	@Autowired
 	private NameService service;
 
@@ -24,7 +28,7 @@ public class ServiceBApplication {
 
 	@RequestMapping("/produce")
 	public String produceName() {
-		System.out.println("IN produce");
+		LOG.info("IN produce");
 		return service.createName();
 	}
 	public static void main(String[] args) {

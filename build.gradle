@@ -17,10 +17,13 @@ ext {
 }
 
 dependencies {
+	implementation 'org.springframework.cloud:spring-cloud-sleuth-zipkin'
+	//implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
 	implementation 'com.netflix.hystrix:hystrix-javanica:1.5.18'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.cloud:spring-cloud-starter-zipkin'
+	//implementation 'org.springframework.cloud:spring-cloud-starter-zipkin'
+
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
